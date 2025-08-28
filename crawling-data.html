@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" data-content_root="./">
 <head>
+	<style>
+pre, pre span {
+    display: block;       /* pastikan tiap span jadi block */
+    text-align: left !important; /* paksa rata kiri */
+    margin: 0;            /* hilangkan margin otomatis */
+    padding: 0;           /* hilangkan padding yang bikin kesan rata tengah */
+}
+</style>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -274,8 +282,9 @@ document.write(`
 					</div>
 					</div>
 					<div class="cell_output docutils container">
-					<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sprynger
-					  Downloading sprynger-0.4.1-py3-none-any.whl (40 kB)
+					<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+					Collecting sprynger
+					Downloading sprynger-0.4.1-py3-none-any.whl (40 kB)
 					Requirement already satisfied: tomli&gt;=1.2.3 in c:\users\happins\appdata\local\programs\python\python310\lib\site-packages (from sprynger) (2.2.1)
 					Requirement already satisfied: lxml in c:\users\happins\appdata\local\programs\python\python310\lib\site-packages (from sprynger) (5.4.0)
 					Requirement already satisfied: urllib3 in c:\users\happins\appdata\local\programs\python\python310\lib\site-packages (from sprynger) (2.4.0)
