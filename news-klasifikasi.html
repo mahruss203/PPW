@@ -1,0 +1,3409 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. load data &#8212; My sample book</title>
+
+    <script data-cfasync="false">
+      document.documentElement.dataset.mode =
+        localStorage.getItem("mode") || "";
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") || "";
+    </script>
+
+    <!-- Loaded before other Sphinx assets -->
+    <link
+      href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b"
+      rel="stylesheet"
+    />
+    <link
+      href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b"
+      rel="stylesheet"
+    />
+    <link
+      href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b"
+      rel="stylesheet"
+    />
+
+    <link
+      href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b"
+      rel="stylesheet"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2"
+    />
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/pygments.css?v=03e43079"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/styles/sphinx-book-theme.css?v=eba8b062"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/togglebutton.css?v=13237357"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/copybutton.css?v=76b2166b"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/sphinx-thebe.css?v=4fa983c6"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="_static/sphinx-design.min.css?v=95c83b7e"
+    />
+
+    <!-- Pre-loaded scripts that we'll load fully later -->
+    <link
+      rel="preload"
+      as="script"
+      href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"
+    />
+    <link
+      rel="preload"
+      as="script"
+      href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"
+    />
+    <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>
+      let toggleHintShow = "Click to show";
+    </script>
+    <script>
+      let toggleHintHide = "Click to hide";
+    </script>
+    <script>
+      let toggleOpenOnPrint = "true";
+    </script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>
+      var togglebuttonSelector = ".toggle, .admonition.dropdown";
+    </script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>
+      const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js";
+      const thebe_selector = ".thebe,.cell";
+      const thebe_selector_input = "pre";
+      const thebe_selector_output = ".output, .cell_output";
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>
+      var togglebuttonSelector = ".toggle, .admonition.dropdown";
+    </script>
+    <script>
+      const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js";
+      const thebe_selector = ".thebe,.cell";
+      const thebe_selector_input = "pre";
+      const thebe_selector_output = ".output, .cell_output";
+    </script>
+    <script>
+      DOCUMENTATION_OPTIONS.pagename = "news-processing";
+    </script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link
+      rel="next"
+      title="Notebooks with MyST Markdown"
+      href="markdown-notebooks.html"
+    />
+    <link rel="prev" title="Markdown Files" href="markdown.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+  </head>
+
+  <body
+    data-bs-spy="scroll"
+    data-bs-target=".bd-toc-nav"
+    data-offset="180"
+    data-bs-root-margin="0px 0px -60%"
+    data-default-mode=""
+  >
+    <div id="pst-skip-link" class="skip-link d-print-none">
+      <a href="#main-content">Skip to main content</a>
+    </div>
+
+    <div id="pst-scroll-pixel-helper"></div>
+
+    <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+      <i class="fa-solid fa-arrow-up"></i>Back to top
+    </button>
+
+    <input
+      type="checkbox"
+      class="sidebar-toggle"
+      id="pst-primary-sidebar-checkbox"
+    />
+    <label
+      class="overlay overlay-primary"
+      for="pst-primary-sidebar-checkbox"
+    ></label>
+
+    <input
+      type="checkbox"
+      class="sidebar-toggle"
+      id="pst-secondary-sidebar-checkbox"
+    />
+    <label
+      class="overlay overlay-secondary"
+      for="pst-secondary-sidebar-checkbox"
+    ></label>
+
+    <div class="search-button__wrapper">
+      <div class="search-button__overlay"></div>
+      <div class="search-button__search-container">
+        <form
+          class="bd-search d-flex align-items-center"
+          action="search.html"
+          method="get"
+        >
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            class="form-control"
+            name="q"
+            id="search-input"
+            placeholder="Search this book..."
+            aria-label="Search this book..."
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          />
+          <span class="search-button__kbd-shortcut"
+            ><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span
+          >
+        </form>
+      </div>
+    </div>
+
+    <div class="pst-async-banner-revealer d-none">
+      <aside
+        id="bd-header-version-warning"
+        class="d-none d-print-none"
+        aria-label="Version warning"
+      ></aside>
+    </div>
+
+    <header
+      class="bd-header navbar navbar-expand-lg bd-navbar d-print-none"
+    ></header>
+
+    <div class="bd-container">
+      <div class="bd-container__inner bd-page-width">
+        <div class="bd-sidebar-primary bd-sidebar">
+          <div class="sidebar-header-items sidebar-primary__section"></div>
+          <div class="sidebar-primary-items__start sidebar-primary__section">
+            <div class="sidebar-primary-item">
+              <a class="navbar-brand logo" href="#">
+                <img
+                  src="_images/foto_profil.jpg"
+                  class="logo__image only-light"
+                  alt="Foto Profil"
+                  style="
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                  "
+                />
+                <script>
+                  document.write(`<img src="_images/foto_profil.jpg" 
+					                     class="logo__image only-dark" 
+					                     alt="Foto Profil"
+					                     style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin-top:20px; margin-bottom:20px;" />`);
+                </script>
+              </a>
+            </div>
+            <div class="sidebar-primary-item">
+              <script>
+                document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+              </script>
+            </div>
+            <div class="sidebar-primary-item">
+              <nav class="bd-links bd-docs-nav" aria-label="Main">
+                <div class="bd-toc-item navbar-nav active">
+                  <ul class="nav bd-sidenav">
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="pengantar-penjelasan.html"
+                        >1. Pengantar Web Mining</a
+                      >
+                      <ul
+                        class="nav bd-sidenav"
+                        style="margin-left: 3px !important"
+                      >
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="pengantar-penjelasan.html"
+                            style="font-size: 12px !important"
+                            >1.1. Definisi Web mining</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="toctree-l1 current active">
+                      <a
+                        class="reference internal"
+                        href="crawling-penjelasan.html"
+                        >2. Web Crawling</a
+                      >
+                      <ul
+                        class="nav bd-sidenav"
+                        style="margin-left: 3px !important"
+                      >
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="crawling-penjelasan.html"
+                            style="font-size: 12px !important"
+                            >2.1. Definisi Web crawling</a
+                          >
+                        </li>
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="crawling-data.html"
+                            style="font-size: 12px !important"
+                            >2.2. Contoh Crawling data</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="preprocessing-penjelasan.html"
+                        >3. Web Data Preprocessing</a
+                      >
+                      <ul
+                        class="nav bd-sidenav"
+                        style="margin-left: 3px !important"
+                      >
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="preprocessing-penjelasan.html"
+                            style="font-size: 12px !important"
+                            >3.1. penjelasan prepocessing</a
+                          >
+                        </li>
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="news-processing.html"
+                            style="font-size: 12px !important"
+                            >3.2. news prepocessing</a
+                          >
+                        </li>
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="pta-processing.html"
+                            style="font-size: 12px !important"
+                            >3.3. pta prepocessing</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="supervised-penjelasan.html"
+                        >4. Pembelajaran Terawasi (Supervised Learning)</a
+                      >
+                      <ul
+                        class="nav bd-sidenav"
+                        style="margin-left: 3px !important"
+                      >
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="supervised-penjelasan.html"
+                            style="font-size: 12px !important"
+                            >4.1. penjelasan Supervised Learning</a
+                          >
+                        </li>
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="news-klasifikasi.html"
+                            style="font-size: 12px !important"
+                            >4.2. news klasifikasi</a
+                          >
+                        </li>
+                        <li class="toctree-l1">
+                          <a
+                            class="reference internal nav-link"
+                            href="pta-processing.html"
+                            style="font-size: 12px !important"
+                            >4.3. pta klasifikasi</a
+                          >
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="unsupervised-penjelasan.html"
+                        >5. Pembelajaran Tak Terawasi (Unsupervised Learning)</a
+                      >
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="content-mining-penjelasan.html"
+                        >6. Web Content Mining (Text Mining)</a
+                      >
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="usage-mining-penjelasan.html"
+                        >7. Web Usage Mining</a
+                      >
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="structure-mining-penjelasan.html"
+                        >8. Web Structure Mining (Graph Mining)</a
+                      >
+                    </li>
+
+                    <li class="toctree-l1">
+                      <a
+                        class="reference internal"
+                        href="deployment-penjelasan.html"
+                        >9. Deployment System</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div
+            class="sidebar-primary-items__end sidebar-primary__section"
+          ></div>
+          <div id="rtd-footer-container"></div>
+        </div>
+
+        <main id="main-content" class="bd-main" role="main">
+          <div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content" style="width: 100%; margin: 0; padding: 0">
+            <div
+              class="bd-article-container"
+              style="width: 100%; max-width: 100%; margin: 0; padding: 0"
+            >
+              <div class="bd-header-article d-print-none">
+                <div class="header-article-items header-article__inner">
+                  <div class="header-article-items__start">
+                    <div class="header-article-item">
+                      <button
+                        class="sidebar-toggle primary-toggle btn btn-sm"
+                        title="Toggle primary sidebar"
+                        data-bs-placement="bottom"
+                        data-bs-toggle="tooltip"
+                      >
+                        <span class="fa-solid fa-bars"></span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="header-article-items__end">
+                    <div class="header-article-item">
+                      <div class="article-header-buttons">
+                        <div class="dropdown dropdown-source-buttons">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="Source repositories"
+                          >
+                            <i class="fab fa-github"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                href="https://github.com/executablebooks/jupyter-book"
+                                target="_blank"
+                                class="btn btn-sm btn-source-repository-button dropdown-item"
+                                title="Source repository"
+                                data-bs-placement="left"
+                                data-bs-toggle="tooltip"
+                              >
+                                <span class="btn__icon-container">
+                                  <i class="fab fa-github"></i>
+                                </span>
+                                <span class="btn__text-container"
+                                  >Repository</span
+                                >
+                              </a>
+                            </li>
+
+                            <li>
+                              <a
+                                href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnews-processing.html&body=Your%20issue%20content%20here."
+                                target="_blank"
+                                class="btn btn-sm btn-source-issues-button dropdown-item"
+                                title="Open an issue"
+                                data-bs-placement="left"
+                                data-bs-toggle="tooltip"
+                              >
+                                <span class="btn__icon-container">
+                                  <i class="fas fa-lightbulb"></i>
+                                </span>
+                                <span class="btn__text-container"
+                                  >Open issue</span
+                                >
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="dropdown dropdown-download-buttons">
+                          <button
+                            class="btn dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                            aria-label="Download this page"
+                          >
+                            <i class="fas fa-download"></i>
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a
+                                href="_sources/news-processing.ipynb"
+                                target="_blank"
+                                class="btn btn-sm btn-download-source-button dropdown-item"
+                                title="Download source file"
+                                data-bs-placement="left"
+                                data-bs-toggle="tooltip"
+                              >
+                                <span class="btn__icon-container">
+                                  <i class="fas fa-file"></i>
+                                </span>
+                                <span class="btn__text-container">.ipynb</span>
+                              </a>
+                            </li>
+
+                            <li>
+                              <button
+                                onclick="window.print()"
+                                class="btn btn-sm btn-download-pdf-button dropdown-item"
+                                title="Print to PDF"
+                                data-bs-placement="left"
+                                data-bs-toggle="tooltip"
+                              >
+                                <span class="btn__icon-container">
+                                  <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span class="btn__text-container">.pdf</span>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <button
+                          onclick="toggleFullScreen()"
+                          class="btn btn-sm btn-fullscreen-button"
+                          title="Fullscreen mode"
+                          data-bs-placement="bottom"
+                          data-bs-toggle="tooltip"
+                        >
+                          <span class="btn__icon-container">
+                            <i class="fas fa-expand"></i>
+                          </span>
+                        </button>
+
+                        <script>
+                          document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+                        </script>
+
+                        <script>
+                          document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+                        </script>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="jb-print-docs-body" class="onlyprint">
+                <h1>1. load data</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                  <div id="jb-print-toc">
+                    <div>
+                      <h2>Contents</h2>
+                    </div>
+                    <nav aria-label="Page">
+                      <ul class="visible nav section-nav flex-column">
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a class="reference internal nav-link" href="#"
+                            >1. load data</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#stopword"
+                            >2.Stopword</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#lower-case-dan-penghapusan-simbol"
+                            >3. lower case dan Penghapusan Simbol</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#cek-ejaan-kata"
+                            >4. Cek ejaan kata</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#stemming"
+                            >5. stemming</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#tokenisasi-data"
+                            >6.tokenisasi data</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#tf-idf-c-bow"
+                            >7. TF-IDF &amp; C-BOW</a
+                          >
+                        </li>
+                        <li class="toc-h1 nav-item toc-entry">
+                          <a
+                            class="reference internal nav-link"
+                            href="#modelling"
+                            >8. Modelling</a
+                          >
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+
+              <div id="searchbox"></div>
+              <article class="bd-article">
+                <section class="tex2jax_ignore mathjax_ignore" id="load-data">
+                  <h1>
+                    1. load data<a
+                      class="headerlink"
+                      href="#load-data"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tabulate</span><span class="w"> </span><span class="kn">import</span> <span class="n">tabulate</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news-kompas.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># tampilkan 10 baris pertama dengan border</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output traceback highlight-ipythontb notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span><span class="w"> </span><span class="nn">tabulate</span><span class="w"> </span><span class="kn">import</span> <span class="n">tabulate</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news-kompas.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># tampilkan 10 baris pertama dengan border</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\parsers\readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File ~\AppData\Local\Programs\Python\Python310\lib\site-packages\pandas\io\common.py:873,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">868</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">869</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
+<span class="g g-Whitespace">    </span><span class="mi">870</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
+<span class="g g-Whitespace">    </span><span class="mi">871</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">872</span>         <span class="c1"># Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">873</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">874</span>             <span class="n">handle</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">875</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">876</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">877</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">878</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">879</span>         <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">880</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">881</span>         <span class="c1"># Binary mode</span>
+<span class="g g-Whitespace">    </span><span class="mi">882</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;news-kompas.csv&#39;
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>title</th>
+                                <th>date</th>
+                                <th>Isi Berita</th>
+                                <th>Kategori</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>
+                                  Investor Pasar Modal Indonesia Tembus 16
+                                  Juta,...
+                                </td>
+                                <td>Kompas.com- 01/05/2025, 14:16 WIB</td>
+                                <td>
+                                  JAKARTA, KOMPAS.com- PTBursa Efek
+                                  Indonesia(BE...
+                                </td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>
+                                  SUN Energy Luncurkan "SUN RISE", Program
+                                  Eduka...
+                                </td>
+                                <td>Kompas.com- 01/05/2025, 10:00 WIB</td>
+                                <td>
+                                  KOMPAS.com- SUN Energy meluncurkan inisiatif
+                                  E...
+                                </td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>
+                                  CPPETINDO Sapa SMKN 36 Jakarta, Edukasi Siswa
+                                  ...
+                                </td>
+                                <td>Kompas.com- 28/04/2025, 20:39 WIB</td>
+                                <td>
+                                  KOMPAS.com -Produsen dan distributor makanan
+                                  h...
+                                </td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>
+                                  Plus Advisor Sambangi BEI, Perkuat Literasi
+                                  In...
+                                </td>
+                                <td>Kompas.com- 28/04/2025, 11:21 WIB</td>
+                                <td>
+                                  KOMPAS.com - Di tengah derasnya arus
+                                  informasi...
+                                </td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>
+                                  Dinas Kesehatan Gorontalo Latih Guru UKS
+                                  Eduka...
+                                </td>
+                                <td>Kompas.com- 27/04/2025, 13:47 WIB</td>
+                                <td>
+                                  GORONTALO, KOMPAS.com– Dinas Kesehatan
+                                  Provins...
+                                </td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>
+                                  5 Tanaman Hias yang Mudah Diperbanyak, Cocok
+                                  u...
+                                </td>
+                                <td>Kompas.com- 16/08/2024, 06:07 WIB</td>
+                                <td>
+                                  KOMPAS.com- Teknik
+                                  memperbanyaktanamanmerupaka...
+                                </td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>
+                                  [POPULER MONEY] Bahlil Buka Suara soal Jadi
+                                  Me...
+                                </td>
+                                <td>Kompas.com- 16/08/2024, 05:40 WIB</td>
+                                <td>
+                                  1. Bahlil Buka Suara soal Kabar Dirinya Bakal
+                                  ...
+                                </td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>
+                                  [POPULER MONEY] Bahaya Tersembunyi dari
+                                  Ambisi...
+                                </td>
+                                <td>Kompas.com- 15/08/2024, 05:40 WIB</td>
+                                <td>
+                                  1. "Crowding Out": Bahaya Tersembunyi dari
+                                  Amb...
+                                </td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>
+                                  [POPULER MONEY] Jebakan Kelas Menengah |
+                                  Atura...
+                                </td>
+                                <td>Kompas.com- 13/08/2024, 05:40 WIB</td>
+                                <td>
+                                  1. JebakanKelas Menengah Minggu lalu, Bank
+                                  Dun...
+                                </td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>
+                                  [POPULER MONEY] PHK Massal Bikin Daya Beli
+                                  Tur...
+                                </td>
+                                <td>Kompas.com- 12/08/2024, 06:13 WIB</td>
+                                <td>
+                                  Harga emas batangan produk PT Aneka Tambang
+                                  (A...
+                                </td>
+                                <td>Money</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 4 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tex2jax_ignore mathjax_ignore" id="stopword">
+                  <h1>
+                    2.Stopword<a
+                      class="headerlink"
+                      href="#stopword"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;stopwords&quot;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news-kompas.csv&quot;</span><span class="p">)</span>
+
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s2">&quot;indonesian&quot;</span><span class="p">))</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_stopwords</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    <span class="n">tokens</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">filtered</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">tokens</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span>
+
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">remove_stopwords</span><span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_stopword.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stderr highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>[nltk_data] Error loading stopwords: &lt;urlopen error [Errno 11001]
+[nltk_data]     getaddrinfo failed&gt;
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]]</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>title</th>
+                                <th>Isi Berita</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>
+                                  Investor Pasar Modal Indonesia Tembus 16
+                                  Juta,...
+                                </td>
+                                <td>
+                                  JAKARTA, KOMPAS.com- PTBursa Efek
+                                  Indonesia(BE...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>
+                                  SUN Energy Luncurkan "SUN RISE", Program
+                                  Eduka...
+                                </td>
+                                <td>
+                                  KOMPAS.com- SUN Energy meluncurkan inisiatif
+                                  E...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>
+                                  CPPETINDO Sapa SMKN 36 Jakarta, Edukasi Siswa
+                                  ...
+                                </td>
+                                <td>
+                                  KOMPAS.com -Produsen distributor makanan
+                                  hewan...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>
+                                  Plus Advisor Sambangi BEI, Perkuat Literasi
+                                  In...
+                                </td>
+                                <td>
+                                  KOMPAS.com - derasnya arus informasi
+                                  kompleksi...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>
+                                  Dinas Kesehatan Gorontalo Latih Guru UKS
+                                  Eduka...
+                                </td>
+                                <td>
+                                  GORONTALO, KOMPAS.com– Dinas Kesehatan
+                                  Provins...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>
+                                  5 Tanaman Hias yang Mudah Diperbanyak, Cocok
+                                  u...
+                                </td>
+                                <td>
+                                  KOMPAS.com- Teknik
+                                  memperbanyaktanamanmerupaka...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>
+                                  [POPULER MONEY] Bahlil Buka Suara soal Jadi
+                                  Me...
+                                </td>
+                                <td>
+                                  1. Bahlil Buka Suara Kabar Diganti
+                                  JadiMenteri...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>
+                                  [POPULER MONEY] Bahaya Tersembunyi dari
+                                  Ambisi...
+                                </td>
+                                <td>
+                                  1. "Crowding Out": Bahaya Tersembunyi
+                                  AmbisiIn...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>
+                                  [POPULER MONEY] Jebakan Kelas Menengah |
+                                  Atura...
+                                </td>
+                                <td>
+                                  1. JebakanKelas Menengah Minggu lalu, Bank
+                                  Dun...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>
+                                  [POPULER MONEY] PHK Massal Bikin Daya Beli
+                                  Tur...
+                                </td>
+                                <td>
+                                  Harga emas batangan produk PT Aneka Tambang
+                                  (A...
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 2 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="tex2jax_ignore mathjax_ignore"
+                  id="lower-case-dan-penghapusan-simbol"
+                >
+                  <h1>
+                    3. lower case dan Penghapusan Simbol<a
+                      class="headerlink"
+                      href="#lower-case-dan-penghapusan-simbol"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+
+<span class="c1"># Load CSV</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_stopword.csv&quot;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&quot;</span>
+    
+    <span class="c1"># Lowercase</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    
+    <span class="c1"># Hapus karakter non-alfabet kecuali titik dan spasi</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;[^a-z.\s]&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    
+    <span class="c1"># Hapus spasi berlebih</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;\s+&quot;</span><span class="p">,</span> <span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    
+    <span class="c1"># Kalau mau hapus stopword tertentu (opsional)</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="n">cleaned_words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;kompas.com&quot;</span><span class="p">,</span> <span class="s2">&quot;cnnindonesia.com&quot;</span><span class="p">]]</span>  <span class="c1"># contoh</span>
+    
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cleaned_words</span><span class="p">)</span>
+
+<span class="c1"># Terapkan cleaning</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+
+<span class="c1"># Buang baris kosong setelah cleaning</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+
+<span class="c1"># Simpan ke CSV baru</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_cleaned.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]]</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>title</th>
+                                <th>Isi Berita</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>
+                                  Investor Pasar Modal Indonesia Tembus 16
+                                  Juta,...
+                                </td>
+                                <td>
+                                  jakarta ptbursa efek indonesia bei melaporkan
+                                  ...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>
+                                  SUN Energy Luncurkan "SUN RISE", Program
+                                  Eduka...
+                                </td>
+                                <td>
+                                  sun energy meluncurkan inisiatif esg berbasis
+                                  ...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>
+                                  CPPETINDO Sapa SMKN 36 Jakarta, Edukasi Siswa
+                                  ...
+                                </td>
+                                <td>
+                                  produsen distributor makanan hewan cppetindo
+                                  m...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>
+                                  Plus Advisor Sambangi BEI, Perkuat Literasi
+                                  In...
+                                </td>
+                                <td>
+                                  derasnya arus informasi kompleksitas dunia
+                                  keu...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>
+                                  Dinas Kesehatan Gorontalo Latih Guru UKS
+                                  Eduka...
+                                </td>
+                                <td>
+                                  gorontalo dinas kesehatan
+                                  provinsigorontalomen...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>
+                                  Kaltim, Miniatur Indonesia Tempat Ibu Kota
+                                  Pol...
+                                </td>
+                                <td>
+                                  nusantara wakil gubernurkalimantan timur
+                                  kalti...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>
+                                  Serangan Udara Israel Tewaskan Pemimpin
+                                  Politi...
+                                </td>
+                                <td>
+                                  gaza serangan udara israeldigazaselatan
+                                  menewa...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>
+                                  Bahlil: Kalau Mau Masuk Politik Disarankan
+                                  Pun...
+                                </td>
+                                <td>
+                                  bogor ketua ketum partai golkarbahlil
+                                  lahadali...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>
+                                  RUU TNI Disahkan, Pengamat Unika Kecam DPR
+                                  yan...
+                                </td>
+                                <td>
+                                  semarang pengamat politikuniversitas katolik
+                                  s...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>
+                                  Pengeboman Gaza di Bulan Ramadhan dan Nasib
+                                  Po...
+                                </td>
+                                <td>
+                                  israelmengejutkan dunia serangan mendadak
+                                  kega...
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1491 rows × 2 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="tex2jax_ignore mathjax_ignore"
+                  id="cek-ejaan-kata"
+                >
+                  <h1>
+                    4. Cek ejaan kata<a
+                      class="headerlink"
+                      href="#cek-ejaan-kata"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">version</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>3.10.0 (tags/v3.10.0:b494f59, Oct  4 2021, 19:00:18) [MSC v.1929 64 bit (AMD64)]
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">spellchecker</span><span class="w"> </span><span class="kn">import</span> <span class="n">SpellChecker</span>
+
+<span class="c1"># Inisialisasi spell checker</span>
+<span class="n">spell</span> <span class="o">=</span> <span class="n">SpellChecker</span><span class="p">()</span>
+
+<span class="c1"># Tambahin kosakata bahasa Indonesia kalau ada</span>
+<span class="c1"># Misalnya punya file kamus &quot;indonesian-words.txt&quot;</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">spell</span><span class="o">.</span><span class="n">word_frequency</span><span class="o">.</span><span class="n">load_text_file</span><span class="p">(</span><span class="s2">&quot;indonesian-words.txt&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kosakata bahasa Indonesia berhasil dimuat.&quot;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tidak ada kamus tambahan, lanjut pake default saja.&quot;</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span>
+
+<span class="c1"># Kata typo untuk dites</span>
+<span class="n">words_to_test</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;naiki&quot;</span><span class="p">]</span>
+
+<span class="c1"># Cek koreksi kata</span>
+<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words_to_test</span><span class="p">:</span>
+    <span class="n">correction</span> <span class="o">=</span> <span class="n">spell</span><span class="o">.</span><span class="n">correction</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="n">candidates</span> <span class="o">=</span> <span class="n">spell</span><span class="o">.</span><span class="n">candidates</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Kata asli     : </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Koreksi utama : </span><span class="si">{</span><span class="n">correction</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot; Kandidat lain : </span><span class="si">{</span><span class="n">candidates</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Kosakata bahasa Indonesia berhasil dimuat.
+
+ Kata asli     : naiki
+ Koreksi utama : naik
+ Kandidat lain : {&#39;naik&#39;}
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">difflib</span>
+
+<span class="c1"># Baca data</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_cleaned.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Load kamus kata</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;indonesian-words.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">kamus</span> <span class="o">=</span> <span class="p">[</span><span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">]</span>
+
+<span class="n">kamus_set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">kamus</span><span class="p">)</span>  <span class="c1"># biar lookup cepat</span>
+
+<span class="c1"># Fungsi koreksi dengan difflib</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">correct_word</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="c1"># Kalau kata ada di kamus → biarin</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">kamus_set</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">word</span>
+    <span class="c1"># Cari kata paling mirip</span>
+    <span class="n">match</span> <span class="o">=</span> <span class="n">difflib</span><span class="o">.</span><span class="n">get_close_matches</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">kamus</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cutoff</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">match</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="n">match</span> <span class="k">else</span> <span class="n">word</span>
+
+<span class="c1"># Cache hasil biar ga cek ulang</span>
+<span class="n">cache</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">correct_with_cache</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">cache</span><span class="p">:</span>
+        <span class="n">cache</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">correct_word</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">cache</span><span class="p">[</span><span class="n">word</span><span class="p">]</span>
+
+<span class="c1"># Terapin ke dataset</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span>
+    <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">correct_with_cache</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">())</span>
+<span class="p">)</span>
+
+<span class="c1"># Simpan hasil</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_spellchecked.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Selesai! Hasil ada di pta_spellchecked.csv&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Selesai! Hasil ada di pta_spellchecked.csv
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tex2jax_ignore mathjax_ignore" id="stemming">
+                  <h1>
+                    5. stemming<a
+                      class="headerlink"
+                      href="#stemming"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">Sastrawi.Stemmer.StemmerFactory</span><span class="w"> </span><span class="kn">import</span> <span class="n">StemmerFactory</span>
+
+<span class="c1"># Load hasil spell check</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_cleaned.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Setup stemmer</span>
+<span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
+<span class="n">stemmer</span> <span class="o">=</span> <span class="n">factory</span><span class="o">.</span><span class="n">create_stemmer</span><span class="p">()</span>
+
+<span class="c1"># Lakukan stemming dari hasil spell check</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">stemmer</span><span class="o">.</span><span class="n">stem</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)))</span>
+
+<span class="c1"># Simpan hasil akhir</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_stemming.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]]</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>Judul</th>
+                                <th>Isi Berita</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>
+                                  Gibran Sabet Gelar Sarjana dari Kampus
+                                  Inggris...
+                                </td>
+                                <td>
+                                  jakarta management development institute of
+                                  si...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>
+                                  Jadwal dan HP Xiaomi, Redmi, serta Poco yang
+                                  K...
+                                </td>
+                                <td>
+                                  antarmuka user interface ui xiaomi hyperos
+                                  bas...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>
+                                  Siswa Naik Pajero ke Sekolah tapi Dapat MBG,
+                                  W...
+                                </td>
+                                <td>
+                                  serang wali murid sekolah dasar islam padu
+                                  sdi...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>
+                                  40 Link Download Twibbon Hari Batik Nasional
+                                  2...
+                                </td>
+                                <td>
+                                  tanggal oktober ingat batik nasional momentum
+                                  ...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>
+                                  Ahli Teknik Sipil ITS: Mushala Ponpes Al
+                                  Khozi...
+                                </td>
+                                <td>
+                                  sidoarjo pakar teknik sipil institut
+                                  teknologi...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>3744</th>
+                                <td>
+                                  Pro Kontra Dedi Mulyadi Hentikan Tambang di
+                                  Pa...
+                                </td>
+                                <td>
+                                  bogor bijak gubernur jawa barat dedi mulyadi
+                                  h...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3745</th>
+                                <td>
+                                  Klasemen ACL 2 Terbaru Usai Persib Usai
+                                  Kalahk...
+                                </td>
+                                <td>
+                                  persib bandung kalah tuan rumah bangkok
+                                  united...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3746</th>
+                                <td>
+                                  Jadwal dan HP Xiaomi, Redmi, serta Poco yang
+                                  K...
+                                </td>
+                                <td>
+                                  antarmuka user interface ui xiaomi hyperos
+                                  bas...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3747</th>
+                                <td>
+                                  40 Link Twibbon Hari Batik Nasional 2025
+                                  untuk...
+                                </td>
+                                <td>
+                                  tanggal oktober ingat batik nasional momentum
+                                  ...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3748</th>
+                                <td>
+                                  Spesifikasi KRI Belati-622, Kapal Cepat Rudal
+                                  ...
+                                </td>
+                                <td>
+                                  jakarta tni angkat laut al resmi kuat armada
+                                  h...
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>3749 rows × 2 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="tex2jax_ignore mathjax_ignore"
+                  id="tokenisasi-data"
+                >
+                  <h1>
+                    6.tokenisasi data<a
+                      class="headerlink"
+                      href="#tokenisasi-data"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;punkt&quot;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;punkt_tab&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stderr highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\happins\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package punkt_tab to
+[nltk_data]     C:\Users\happins\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt_tab is already up-to-date!
+</pre>
+                        </div>
+                      </div>
+                      <div
+                        class="output text_plain highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>True
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+
+<span class="c1"># Baca CSV</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_cleaned.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tokenisasi langsung simpan dalam bentuk list</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">word_tokenize</span><span class="p">)</span>
+
+<span class="c1"># Simpan ke file baru (tiap sel berupa list of tokens)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_tokenizing.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df</span><span class="p">[[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]]</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>title</th>
+                                <th>Isi Berita</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>
+                                  Investor Pasar Modal Indonesia Tembus 16
+                                  Juta,...
+                                </td>
+                                <td>
+                                  [jakarta, ptbursa, efek, indonesia, bei,
+                                  melap...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>
+                                  SUN Energy Luncurkan "SUN RISE", Program
+                                  Eduka...
+                                </td>
+                                <td>
+                                  [sun, energy, meluncurkan, inisiatif, esg,
+                                  ber...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>
+                                  CPPETINDO Sapa SMKN 36 Jakarta, Edukasi Siswa
+                                  ...
+                                </td>
+                                <td>
+                                  [produsen, distributor, makanan, hewan,
+                                  cppeti...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>
+                                  Plus Advisor Sambangi BEI, Perkuat Literasi
+                                  In...
+                                </td>
+                                <td>
+                                  [derasnya, arus, informasi, kompleksitas,
+                                  duni...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>
+                                  Dinas Kesehatan Gorontalo Latih Guru UKS
+                                  Eduka...
+                                </td>
+                                <td>
+                                  [gorontalo, dinas, kesehatan,
+                                  provinsigorontal...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>
+                                  5 Tanaman Hias yang Mudah Diperbanyak, Cocok
+                                  u...
+                                </td>
+                                <td>
+                                  [teknik, memperbanyaktanamanmerupakan,
+                                  menyena...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>
+                                  [POPULER MONEY] Bahlil Buka Suara soal Jadi
+                                  Me...
+                                </td>
+                                <td>
+                                  [., bahlil, buka, suara, kabar, diganti,
+                                  jadim...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>
+                                  [POPULER MONEY] Bahaya Tersembunyi dari
+                                  Ambisi...
+                                </td>
+                                <td>
+                                  [., crowding, out, bahaya, tersembunyi,
+                                  ambisi...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>
+                                  [POPULER MONEY] Jebakan Kelas Menengah |
+                                  Atura...
+                                </td>
+                                <td>
+                                  [., jebakankelas, menengah, minggu, lalu,
+                                  bank...
+                                </td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>
+                                  [POPULER MONEY] PHK Massal Bikin Daya Beli
+                                  Tur...
+                                </td>
+                                <td>
+                                  [harga, emas, batangan, produk, pt, aneka,
+                                  tam...
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 2 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section
+                  class="tex2jax_ignore mathjax_ignore"
+                  id="tf-idf-c-bow"
+                >
+                  <h1>
+                    7. TF-IDF &amp; C-BOW<a
+                      class="headerlink"
+                      href="#tf-idf-c-bow"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.feature_extraction.text</span><span class="w"> </span><span class="kn">import</span> <span class="n">TfidfVectorizer</span>
+
+<span class="c1"># === 1. Baca data ===</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_tokenizing.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan 5 baris pertama</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Contoh data:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+<span class="c1"># === 2. TF-IDF Vectorization ===</span>
+<span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+    <span class="n">max_features</span><span class="o">=</span><span class="mi">20000000000000</span><span class="p">,</span>      <span class="c1"># batas atas fitur</span>
+    <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>       <span class="c1"># unigram + bigram</span>
+    <span class="n">stop_words</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+    <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span>                 <span class="c1"># hanya ambil kata yg muncul &gt;=2 dokumen</span>
+<span class="p">)</span>
+
+<span class="n">X_tfidf</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">))</span>
+
+<span class="c1"># === 3. Ambil fitur ===</span>
+<span class="n">fitur</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah fitur TF-IDF: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">fitur</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh fitur:&quot;</span><span class="p">,</span> <span class="n">fitur</span><span class="p">[:</span><span class="mi">20</span><span class="p">])</span>
+
+<span class="c1"># === 4. Konversi ke DataFrame + tambahkan kategori ===</span>
+<span class="n">df_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_tfidf</span><span class="o">.</span><span class="n">toarray</span><span class="p">(),</span> <span class="n">columns</span><span class="o">=</span><span class="n">fitur</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df_tfidf</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;Kategori&#39; tidak ada!&quot;</span><span class="p">)</span>
+
+<span class="n">df_tfidf</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_tfidf.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil TF-IDF disimpan ke &#39;news_tfidf.csv&#39;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Contoh data:
+                                               title  \
+0  Investor Pasar Modal Indonesia Tembus 16 Juta,...   
+1  SUN Energy Luncurkan &quot;SUN RISE&quot;, Program Eduka...   
+2  CPPETINDO Sapa SMKN 36 Jakarta, Edukasi Siswa ...   
+3  Plus Advisor Sambangi BEI, Perkuat Literasi In...   
+4  Dinas Kesehatan Gorontalo Latih Guru UKS Eduka...   
+
+                                date  \
+0  Kompas.com- 01/05/2025, 14:16 WIB   
+1  Kompas.com- 01/05/2025, 10:00 WIB   
+2  Kompas.com- 28/04/2025, 20:39 WIB   
+3  Kompas.com- 28/04/2025, 11:21 WIB   
+4  Kompas.com- 27/04/2025, 13:47 WIB   
+
+                                          Isi Berita Kategori  
+0  [&#39;jakarta&#39;, &#39;ptbursa&#39;, &#39;efek&#39;, &#39;indonesia&#39;, &#39;b...  Edukasi  
+1  [&#39;sun&#39;, &#39;energy&#39;, &#39;meluncurkan&#39;, &#39;inisiatif&#39;, ...  Edukasi  
+2  [&#39;produsen&#39;, &#39;distributor&#39;, &#39;makanan&#39;, &#39;hewan&#39;...  Edukasi  
+3  [&#39;derasnya&#39;, &#39;arus&#39;, &#39;informasi&#39;, &#39;kompleksita...  Edukasi  
+4  [&#39;gorontalo&#39;, &#39;dinas&#39;, &#39;kesehatan&#39;, &#39;provinsig...  Edukasi  
+Jumlah fitur TF-IDF: 14453
+Contoh fitur: [&#39;abad&#39; &#39;abadi&#39; &#39;abai&#39; &#39;abang&#39; &#39;abba&#39; &#39;abbas&#39; &#39;abdee&#39; &#39;abdi&#39; &#39;abdul&#39;
+ &#39;abdullah&#39; &#39;abi&#39; &#39;abide&#39; &#39;abides&#39; &#39;abk&#39; &#39;able&#39; &#39;abnormal&#39; &#39;about&#39; &#39;above&#39;
+ &#39;abrasi&#39; &#39;abroad&#39;]
+Hasil TF-IDF disimpan ke &#39;news_tfidf.csv&#39;
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df_tfidf</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>abad</th>
+                                <th>abadi</th>
+                                <th>abai</th>
+                                <th>abang</th>
+                                <th>abba</th>
+                                <th>abbas</th>
+                                <th>abdee</th>
+                                <th>abdi</th>
+                                <th>abdul</th>
+                                <th>abdullah</th>
+                                <th>...</th>
+                                <th>zoo</th>
+                                <th>zoologi</th>
+                                <th>zoom</th>
+                                <th>zuckerberg</th>
+                                <th>zulfikar</th>
+                                <th>zulhas</th>
+                                <th>zulkarnaen</th>
+                                <th>zulkifli</th>
+                                <th>zurich</th>
+                                <th>Kategori</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 14454 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;NumPy version:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">gensim</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Gensim version:&quot;</span><span class="p">,</span> <span class="n">gensim</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>NumPy version: 1.26.4
+Gensim version: 4.3.3
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">Word2Vec</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="c1"># === 1. Baca data ===</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_tokenizing.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Tokenisasi sederhana (asumsi kolom sudah tokenized per kata dipisah spasi)</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># === 2. Latih model CBOW ===</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Word2Vec</span><span class="p">(</span>
+    <span class="n">sentences</span><span class="p">,</span>
+    <span class="n">vector_size</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>   <span class="c1"># dimensi embedding</span>
+    <span class="n">window</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span>          <span class="c1"># konteks sekitar kata</span>
+    <span class="n">min_count</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>       <span class="c1"># kata muncul &lt;2 kali di-skip</span>
+    <span class="n">sg</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>              <span class="c1"># 0 = CBOW, 1 = SkipGram</span>
+    <span class="n">workers</span><span class="o">=</span><span class="mi">4</span>
+<span class="p">)</span>
+
+<span class="c1"># === 3. Representasi dokumen (rata-rata embedding kata) ===</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">document_vector</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">model</span><span class="p">):</span>
+    <span class="c1"># hanya ambil kata yg ada di vocab</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">w</span> <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="o">.</span><span class="n">key_to_index</span><span class="p">]</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">vector_size</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">wv</span><span class="p">[</span><span class="n">words</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">X_cbow</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">document_vector</span><span class="p">(</span><span class="n">doc</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span> <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">sentences</span><span class="p">])</span>
+
+<span class="c1"># === 4. Buat DataFrame + tambahkan kategori ===</span>
+<span class="n">df_cbow</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_cbow</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="n">df_cbow</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Simpan hasil</span>
+<span class="n">df_cbow</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_cbow.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hasil CBOW disimpan ke &#39;news_cbow.csv&#39;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Hasil CBOW disimpan ke &#39;news_cbow.csv&#39;
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df_cbow</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>0</th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>...</th>
+                                <th>91</th>
+                                <th>92</th>
+                                <th>93</th>
+                                <th>94</th>
+                                <th>95</th>
+                                <th>96</th>
+                                <th>97</th>
+                                <th>98</th>
+                                <th>99</th>
+                                <th>Kategori</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>0.131091</td>
+                                <td>0.186247</td>
+                                <td>0.548922</td>
+                                <td>0.194254</td>
+                                <td>-0.424635</td>
+                                <td>-0.243626</td>
+                                <td>0.237484</td>
+                                <td>0.577515</td>
+                                <td>-0.339726</td>
+                                <td>-0.324244</td>
+                                <td>...</td>
+                                <td>-0.063074</td>
+                                <td>0.259106</td>
+                                <td>0.497088</td>
+                                <td>0.637503</td>
+                                <td>0.408001</td>
+                                <td>0.172490</td>
+                                <td>-0.620745</td>
+                                <td>-0.493775</td>
+                                <td>-0.094968</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>0.179100</td>
+                                <td>0.108522</td>
+                                <td>0.470279</td>
+                                <td>0.170957</td>
+                                <td>-0.423694</td>
+                                <td>-0.221441</td>
+                                <td>0.195610</td>
+                                <td>0.458582</td>
+                                <td>-0.301297</td>
+                                <td>-0.240326</td>
+                                <td>...</td>
+                                <td>-0.066970</td>
+                                <td>0.239429</td>
+                                <td>0.468050</td>
+                                <td>0.535309</td>
+                                <td>0.333854</td>
+                                <td>0.156137</td>
+                                <td>-0.511947</td>
+                                <td>-0.377832</td>
+                                <td>-0.064563</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>0.054915</td>
+                                <td>0.203347</td>
+                                <td>0.458543</td>
+                                <td>0.228494</td>
+                                <td>-0.371011</td>
+                                <td>-0.160025</td>
+                                <td>0.246622</td>
+                                <td>0.559096</td>
+                                <td>-0.319516</td>
+                                <td>-0.320796</td>
+                                <td>...</td>
+                                <td>-0.095162</td>
+                                <td>0.149281</td>
+                                <td>0.410682</td>
+                                <td>0.681629</td>
+                                <td>0.369864</td>
+                                <td>0.179426</td>
+                                <td>-0.587866</td>
+                                <td>-0.468755</td>
+                                <td>-0.007699</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>0.144731</td>
+                                <td>0.138659</td>
+                                <td>0.508000</td>
+                                <td>0.190652</td>
+                                <td>-0.432468</td>
+                                <td>-0.223512</td>
+                                <td>0.207046</td>
+                                <td>0.520295</td>
+                                <td>-0.308742</td>
+                                <td>-0.281062</td>
+                                <td>...</td>
+                                <td>-0.076088</td>
+                                <td>0.228091</td>
+                                <td>0.480409</td>
+                                <td>0.589977</td>
+                                <td>0.365999</td>
+                                <td>0.155655</td>
+                                <td>-0.571373</td>
+                                <td>-0.446793</td>
+                                <td>-0.056779</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>0.232736</td>
+                                <td>0.138371</td>
+                                <td>0.540086</td>
+                                <td>0.214398</td>
+                                <td>-0.420234</td>
+                                <td>-0.221946</td>
+                                <td>0.271661</td>
+                                <td>0.556076</td>
+                                <td>-0.342488</td>
+                                <td>-0.320716</td>
+                                <td>...</td>
+                                <td>-0.134876</td>
+                                <td>0.201438</td>
+                                <td>0.448708</td>
+                                <td>0.640561</td>
+                                <td>0.366658</td>
+                                <td>0.191131</td>
+                                <td>-0.598724</td>
+                                <td>-0.479570</td>
+                                <td>-0.036248</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>-0.015837</td>
+                                <td>0.197466</td>
+                                <td>0.445449</td>
+                                <td>0.247196</td>
+                                <td>-0.372641</td>
+                                <td>-0.160609</td>
+                                <td>0.212690</td>
+                                <td>0.518375</td>
+                                <td>-0.213855</td>
+                                <td>-0.276979</td>
+                                <td>...</td>
+                                <td>-0.113760</td>
+                                <td>0.125088</td>
+                                <td>0.409569</td>
+                                <td>0.690890</td>
+                                <td>0.339439</td>
+                                <td>0.108195</td>
+                                <td>-0.561252</td>
+                                <td>-0.471474</td>
+                                <td>0.063265</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>0.109113</td>
+                                <td>0.237649</td>
+                                <td>0.588572</td>
+                                <td>0.189534</td>
+                                <td>-0.523235</td>
+                                <td>-0.301994</td>
+                                <td>0.214196</td>
+                                <td>0.683853</td>
+                                <td>-0.409882</td>
+                                <td>-0.307277</td>
+                                <td>...</td>
+                                <td>-0.031662</td>
+                                <td>0.286178</td>
+                                <td>0.535869</td>
+                                <td>0.584969</td>
+                                <td>0.415304</td>
+                                <td>0.231961</td>
+                                <td>-0.637495</td>
+                                <td>-0.472052</td>
+                                <td>-0.119423</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>0.073639</td>
+                                <td>0.296061</td>
+                                <td>0.642013</td>
+                                <td>0.252289</td>
+                                <td>-0.434806</td>
+                                <td>-0.338295</td>
+                                <td>0.265953</td>
+                                <td>0.722176</td>
+                                <td>-0.344409</td>
+                                <td>-0.393797</td>
+                                <td>...</td>
+                                <td>-0.074808</td>
+                                <td>0.285166</td>
+                                <td>0.520027</td>
+                                <td>0.755681</td>
+                                <td>0.492587</td>
+                                <td>0.118117</td>
+                                <td>-0.705544</td>
+                                <td>-0.592327</td>
+                                <td>-0.069974</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>0.174069</td>
+                                <td>0.194409</td>
+                                <td>0.608570</td>
+                                <td>0.187827</td>
+                                <td>-0.446067</td>
+                                <td>-0.308131</td>
+                                <td>0.255259</td>
+                                <td>0.604009</td>
+                                <td>-0.361639</td>
+                                <td>-0.304290</td>
+                                <td>...</td>
+                                <td>-0.030356</td>
+                                <td>0.354983</td>
+                                <td>0.545259</td>
+                                <td>0.626287</td>
+                                <td>0.457081</td>
+                                <td>0.197913</td>
+                                <td>-0.636551</td>
+                                <td>-0.510431</td>
+                                <td>-0.136331</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>-0.128727</td>
+                                <td>0.404871</td>
+                                <td>0.736926</td>
+                                <td>0.251091</td>
+                                <td>-0.580607</td>
+                                <td>-0.328745</td>
+                                <td>0.166664</td>
+                                <td>0.940158</td>
+                                <td>-0.362204</td>
+                                <td>-0.502075</td>
+                                <td>...</td>
+                                <td>-0.046927</td>
+                                <td>0.198328</td>
+                                <td>0.612593</td>
+                                <td>0.758648</td>
+                                <td>0.518895</td>
+                                <td>0.126742</td>
+                                <td>-0.817116</td>
+                                <td>-0.702395</td>
+                                <td>-0.080140</td>
+                                <td>Money</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 101 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corpora</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">LdaModel</span>
+
+<span class="c1"># === 1. Baca data mentah ===</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_tokenizing.csv&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s2">&quot;Isi Berita&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="ow">or</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;Isi Berita&#39; atau &#39;Kategori&#39; tidak ditemukan!&quot;</span><span class="p">)</span>
+
+<span class="c1"># === 2. Tokenisasi ===</span>
+<span class="n">texts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Isi Berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">())</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="c1"># === 3. Buat kamus &amp; corpus ===</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+<span class="n">dictionary</span><span class="o">.</span><span class="n">filter_extremes</span><span class="p">(</span><span class="n">no_below</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">no_above</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>
+
+<span class="c1"># === 4. Latih model LDA ===</span>
+<span class="n">num_topics</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">LdaModel</span><span class="p">(</span>
+    <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span>
+    <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+    <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span>
+    <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">iterations</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># === 5. Konversi ke vektor topik ===</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">bow</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">):</span>
+    <span class="n">topic_probs</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">]</span> <span class="o">*</span> <span class="n">num_topics</span>
+    <span class="k">for</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">bow</span><span class="p">):</span>
+        <span class="n">topic_probs</span><span class="p">[</span><span class="n">topic_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">topic_probs</span><span class="p">)</span>
+
+<span class="n">X_lda</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">bow</span><span class="p">,</span> <span class="n">num_topics</span><span class="p">)</span> <span class="k">for</span> <span class="n">bow</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">])</span>
+
+<span class="c1"># === 6. Simpan hasil ke CSV ===</span>
+<span class="n">df_lda</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_lda</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topic_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_topics</span><span class="p">)])</span>
+<span class="n">df_lda</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span>
+<span class="n">df_lda</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;news_lda.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Hasil vektor LDA disimpan ke &#39;news_lda.csv&#39;&quot;</span><span class="p">)</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>✅ Hasil vektor LDA disimpan ke &#39;news_lda.csv&#39;
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="n">df_lda</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div class="output text_html">
+                        <div>
+                          <style scoped>
+                            .dataframe tbody tr th:only-of-type {
+                              vertical-align: middle;
+                            }
+
+                            .dataframe tbody tr th {
+                              vertical-align: top;
+                            }
+
+                            .dataframe thead th {
+                              text-align: right;
+                            }
+                          </style>
+                          <table border="1" class="dataframe">
+                            <thead>
+                              <tr style="text-align: right">
+                                <th></th>
+                                <th>Topic_1</th>
+                                <th>Topic_2</th>
+                                <th>Topic_3</th>
+                                <th>Topic_4</th>
+                                <th>Topic_5</th>
+                                <th>Topic_6</th>
+                                <th>Topic_7</th>
+                                <th>Topic_8</th>
+                                <th>Topic_9</th>
+                                <th>Topic_10</th>
+                                <th>...</th>
+                                <th>Topic_12</th>
+                                <th>Topic_13</th>
+                                <th>Topic_14</th>
+                                <th>Topic_15</th>
+                                <th>Topic_16</th>
+                                <th>Topic_17</th>
+                                <th>Topic_18</th>
+                                <th>Topic_19</th>
+                                <th>Topic_20</th>
+                                <th>Kategori</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>0</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.118310</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.878909</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>1</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.011658</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.977535</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>2</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.815963</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.177826</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>3</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.997960</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>4</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.417652</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.197198</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.380853</td>
+                                <td>0.0</td>
+                                <td>Edukasi</td>
+                              </tr>
+                              <tr>
+                                <th>...</th>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                              </tr>
+                              <tr>
+                                <th>1494</th>
+                                <td>0.995698</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1495</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.543478</td>
+                                <td>0.0</td>
+                                <td>0.392857</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.010102</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.049141</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1496</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.045037</td>
+                                <td>0.000000</td>
+                                <td>0.757101</td>
+                                <td>0.0</td>
+                                <td>0.175765</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.016455</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1497</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.135537</td>
+                                <td>0.555050</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.229175</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.075838</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                              <tr>
+                                <th>1498</th>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.695392</td>
+                                <td>0.0</td>
+                                <td>...</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.000000</td>
+                                <td>0.296976</td>
+                                <td>0.0</td>
+                                <td>0.0</td>
+                                <td>0.000000</td>
+                                <td>0.0</td>
+                                <td>Money</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <p>1499 rows × 21 columns</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section class="tex2jax_ignore mathjax_ignore" id="modelling">
+                  <h1>
+                    8. Modelling<a
+                      class="headerlink"
+                      href="#modelling"
+                      title="Link to this heading"
+                      >#</a
+                    >
+                  </h1>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># === 1. Baca data hasil TF-IDF ===</span>
+<span class="n">df_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_tfidf.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pastikan kolom target tersedia</span>
+<span class="k">if</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df_tfidf</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;Kategori&#39; tidak ada di dataset!&quot;</span><span class="p">)</span>
+
+<span class="c1"># === 2. Pisahkan fitur dan label ===</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_tfidf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_tfidf</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span>
+
+<span class="c1"># === 3. Split data (acak + stratifikasi) ===</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+<span class="p">)</span>
+
+<span class="c1"># === 4. Model SVM ===</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>  
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># === 5. Prediksi ===</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># === 6. Evaluasi ===</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Classification Report ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Akurasi: 0.9622222222222222
+
+=== Classification Report ===
+              precision    recall  f1-score   support
+
+     Edukasi       0.95      0.97      0.96       150
+       Money       0.96      0.97      0.97       150
+      Travel       0.98      0.94      0.96       150
+
+    accuracy                           0.96       450
+   macro avg       0.96      0.96      0.96       450
+weighted avg       0.96      0.96      0.96       450
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># === 1. Baca data hasil TF-IDF ===</span>
+<span class="n">df_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_cbow.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Pastikan kolom target tersedia</span>
+<span class="k">if</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df_tfidf</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;Kategori&#39; tidak ada di dataset!&quot;</span><span class="p">)</span>
+
+<span class="c1"># === 2. Pisahkan fitur dan label ===</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_tfidf</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_tfidf</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span>
+
+<span class="c1"># === 3. Split data (acak + stratifikasi) ===</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+<span class="p">)</span>
+
+<span class="c1"># === 4. Model SVM ===</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>  
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># === 5. Prediksi ===</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="c1"># === 6. Evaluasi ===</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Classification Report ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Akurasi: 0.8266666666666667
+
+=== Classification Report ===
+              precision    recall  f1-score   support
+
+     Edukasi       0.81      0.87      0.84       100
+       Money       0.92      0.77      0.84       100
+      Travel       0.78      0.84      0.81       100
+
+    accuracy                           0.83       300
+   macro avg       0.83      0.83      0.83       300
+weighted avg       0.83      0.83      0.83       300
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cell docutils container">
+                    <div class="cell_input docutils container">
+                      <div class="highlight-ipython3 notranslate">
+                        <div class="highlight">
+                          <pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># === 1. Baca hasil LDA ===</span>
+<span class="n">df_lda</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;news_lda.csv&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="s2">&quot;Kategori&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df_lda</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;Kategori&#39; tidak ada di dataset!&quot;</span><span class="p">)</span>
+
+<span class="c1"># === 2. Pisahkan fitur dan label ===</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df_lda</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">])</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df_lda</span><span class="p">[</span><span class="s2">&quot;Kategori&quot;</span><span class="p">]</span>
+
+<span class="c1"># === 3. Split data ===</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">stratify</span><span class="o">=</span><span class="n">y</span>
+<span class="p">)</span>
+
+<span class="c1"># === 4. Latih model SVM ===</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">5000</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+<span class="c1"># === 5. Prediksi &amp; evaluasi ===</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Classification Report ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cell_output docutils container">
+                      <div
+                        class="output stream highlight-myst-ansi notranslate"
+                      >
+                        <div class="highlight">
+                          <pre><span></span>Akurasi: 0.7733333333333333
+
+=== Classification Report ===
+              precision    recall  f1-score   support
+
+     Edukasi       0.86      0.75      0.80       100
+       Money       0.76      0.76      0.76       100
+      Travel       0.72      0.81      0.76       100
+
+    accuracy                           0.77       300
+   macro avg       0.78      0.77      0.77       300
+weighted avg       0.78      0.77      0.77       300
+</pre>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <script type="text/x-thebe-config">
+                  {
+                      requestKernel: true,
+                      binderOptions: {
+                          repo: "binder-examples/jupyter-stacks-datascience",
+                          ref: "master",
+                      },
+                      codeMirrorConfig: {
+                          theme: "abcdef",
+                          mode: "python"
+                      },
+                      kernelOptions: {
+                          name: "python3",
+                          path: "./."
+                      },
+                      predefinedOutput: true
+                  }
+                </script>
+                <script>
+                  kernelName = "python3";
+                </script>
+              </article>
+
+              <footer class="prev-next-footer d-print-none">
+                <div class="prev-next-area">
+                  <a
+                    class="left-prev"
+                    href="markdown.html"
+                    title="previous page"
+                  >
+                    <i class="fa-solid fa-angle-left"></i>
+                    <div class="prev-next-info">
+                      <p class="prev-next-subtitle">previous</p>
+                      <p class="prev-next-title">Markdown Files</p>
+                    </div>
+                  </a>
+                  <a
+                    class="right-next"
+                    href="markdown-notebooks.html"
+                    title="next page"
+                  >
+                    <div class="prev-next-info">
+                      <p class="prev-next-subtitle">next</p>
+                      <p class="prev-next-title">
+                        Notebooks with MyST Markdown
+                      </p>
+                    </div>
+                    <i class="fa-solid fa-angle-right"></i>
+                  </a>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner container">
+              <div class="footer-item">
+                <p class="component-author">By The Jupyter Book Community</p>
+              </div>
+
+              <div class="footer-item">
+                <p class="copyright">
+                  © Copyright 2023.
+                  <br />
+                </p>
+              </div>
+
+              <div class="footer-item"></div>
+
+              <div class="footer-item"></div>
+            </div>
+          </footer>
+        </main>
+      </div>
+    </div>
+
+    <!-- Scripts loaded after <body> so the DOM is not blocked -->
+    <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <footer class="bd-footer"></footer>
+  </body>
+</html>
